@@ -766,7 +766,7 @@ class _InspeccionPageState extends State<InspeccionPage> {
                   }
                   Navigator.of(context).pop();
                 },
-                child: Text("data"),
+                child: Text("guardar"),
               )
             ])));
   }
