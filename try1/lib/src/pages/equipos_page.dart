@@ -1,8 +1,6 @@
 import 'dart:convert';
-import 'dart:math';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
-import 'package:try1/src/modelos/cliente_modelo.dart';
 import 'package:try1/src/modelos/equipo_modelo.dart';
 import 'package:try1/src/pages/detalle_equipo_page.dart';
 import 'package:try1/src/util/preferencias_usuario.dart';

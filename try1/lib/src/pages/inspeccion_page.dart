@@ -811,7 +811,4 @@ class _InspeccionPageState extends State<InspeccionPage> {
     return "Rechazado";
   }
 
-  _back(BuildContext context) {
-    Navigator.pop(context);
-  }
 }

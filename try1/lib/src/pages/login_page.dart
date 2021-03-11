@@ -1,5 +1,4 @@
 import 'package:try1/src/pages/clientes2_page.dart';
-import 'package:try1/src/pages/clientes_page.dart';
 import 'package:try1/src/util/preferencias_usuario.dart';
 import 'dart:convert' as convert;
 import 'package:http/http.dart' as http;

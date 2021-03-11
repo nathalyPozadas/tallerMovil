@@ -1,5 +1,4 @@
 import 'package:try1/src/pages/clientes2_page.dart';
-import 'package:try1/src/pages/clientes_page.dart';
 import 'package:try1/src/pages/equipos_page.dart';
 import 'package:try1/src/pages/detalle_equipo_page.dart';
 import 'package:try1/src/pages/inspeccion_page.dart';
