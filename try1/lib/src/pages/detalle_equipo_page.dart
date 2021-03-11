@@ -138,16 +138,7 @@ class _DetalleEquipoPageState extends State<DetalleEquipoPage> {
                     });
                   },
                   child: Text("Realizar Inspección")
-                  ),
-              RaisedButton(
-                  onPressed: () async{
-                    var result = await BarcodeScanner.scan();
-                    print(result.rawContent);
-                    int a= int.parse(result.rawContent);
-                    _verInspeccion(context, a);
-                  },
-                  child: Text("Realizar Inspección")
-                  ),
+                  )
             ],
           ),
         ));

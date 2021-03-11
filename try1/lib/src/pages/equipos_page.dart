@@ -5,6 +5,8 @@ import 'package:try1/src/modelos/equipo_modelo.dart';
 import 'package:try1/src/pages/detalle_equipo_page.dart';
 import 'package:try1/src/util/preferencias_usuario.dart';
 import 'package:try1/src/widgets/menu_widget.dart';
+import 'package:try1/src/pages/inspeccion_page.dart';
+import 'package:barcode_scan/barcode_scan.dart';
 
 class EquiposPage extends StatefulWidget {
   static final String routeName = 'equipos';
@@ -49,6 +51,28 @@ class _EquiposPageState extends State<EquiposPage> {
     return Scaffold(
         appBar: AppBar(
           title: Text("Equipos"),
+          actions: <Widget>[
+    Padding(
+      padding: EdgeInsets.only(right: 20.0),
+      child: GestureDetector(
+        onTap: () async{
+                    try {
+                      var result = await BarcodeScanner.scan();
+                    print(result.rawContent);
+                      int a= int.parse(result.rawContent);
+                    _verInspeccion(context, a);
+                    } catch (e) {
+
+                    }
+                    
+                  },
+        child: Icon(
+          Icons.camera,
+          size: 26.0,
+        ),
+      )
+    ),
+    ]
         ),
         drawer: MenuWidget(),
         body: Container(
@@ -77,8 +101,6 @@ class _EquiposPageState extends State<EquiposPage> {
                                       title: Title(
                                           color: Colors.black,
                                           child: Text("Extintor " +
-                                              (index + 1).toString() +
-                                              " - " +
                                               snapshot.data[index].nro_serie)),
                                       subtitle: Text(snapshot
                                           .data[index].ubicacion
@@ -96,5 +118,9 @@ class _EquiposPageState extends State<EquiposPage> {
 
   _verDetalle(BuildContext context, Equipo equipo) {
     Navigator.pushNamed(context, DetalleEquipoPage.routeName, arguments: equipo);
+  }
+
+    _verInspeccion(BuildContext context, int id) {
+    Navigator.pushNamed(context, InspeccionPage.routeName,arguments: id);
   }
 }

@@ -750,7 +750,7 @@ class _InspeccionPageState extends State<InspeccionPage> {
 
                   final prefs = new PreferenciasUsuario();
                   final resp = await http.post(
-                      'http://glacial-eyrie-03654.herokuapp.com/api/inspeccionM/1',
+                      'http://glacial-eyrie-03654.herokuapp.com/api/inspeccionM/'+args.toString(),
                       headers: {
                         "Accept": "application/json",
                         "Authorization": prefs.token,
