@@ -1,5 +1,5 @@
 
-import 'package:try1/src/pages/clientes2_page.dart';
+import 'package:try1/src/pages/clientes_page.dart';
 import 'package:try1/src/pages/clientes_page.dart';
 import 'package:try1/src/pages/login_page.dart';
 import 'package:try1/src/util/preferencias_usuario.dart';
@@ -24,7 +24,7 @@ class MenuWidget extends StatelessWidget {
             leading: Icon(Icons.home, color: Colors.blue,),
             title: Text('Principal'),
             onTap: (){
-              Navigator.pushReplacementNamed(context, Clientes2Page.routeName);
+              Navigator.pushReplacementNamed(context, ClientesPage.routeName);
             },
           ),
           Divider(),

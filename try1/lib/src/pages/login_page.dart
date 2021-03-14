@@ -1,4 +1,4 @@
-import 'package:try1/src/pages/clientes2_page.dart';
+import 'package:try1/src/pages/clientes_page.dart';
 import 'package:try1/src/util/preferencias_usuario.dart';
 import 'dart:convert' as convert;
 import 'package:http/http.dart' as http;
@@ -113,7 +113,7 @@ class _LoginPageState extends State<LoginPage> {
         prefs.nombre = decodedResp['nombre'];
         prefs.email = decodedResp['email'];
         print("entra a if 200    2");
-        Navigator.pushReplacementNamed(context, Clientes2Page.routeName);
+        Navigator.pushReplacementNamed(context, ClientesPage.routeName);
       }
     }
 

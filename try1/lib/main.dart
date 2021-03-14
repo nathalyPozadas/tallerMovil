@@ -1,4 +1,4 @@
-import 'package:try1/src/pages/clientes2_page.dart';
+import 'package:try1/src/pages/clientes_page.dart';
 import 'package:try1/src/pages/equipos_page.dart';
 import 'package:try1/src/pages/detalle_equipo_page.dart';
 import 'package:try1/src/pages/inspeccion_page.dart';
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
       initialRoute: prefs.getPagina(),
       routes: {
         LoginPage.routeName : ( BuildContext context ) => LoginPage(),
-        Clientes2Page.routeName : ( BuildContext context ) => Clientes2Page(),
+        ClientesPage.routeName : ( BuildContext context ) => ClientesPage(),
         SucursalesPage.routeName : ( BuildContext context ) => SucursalesPage(),
         EquiposPage.routeName : ( BuildContext context ) => EquiposPage(),
         DetalleEquipoPage.routeName: (BuildContext context)=> DetalleEquipoPage(),

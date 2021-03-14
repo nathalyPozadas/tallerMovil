@@ -28,7 +28,7 @@ class PreferenciasUsuario {
 
   String getPagina(){
     if (this.token != null && this.token != '') {
-      return 'clientesx';
+      return 'clientes';
     }
     return 'login';
   }
